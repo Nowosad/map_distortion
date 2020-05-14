@@ -28,7 +28,20 @@ world_poly = world_sel %>%
   st_cast("POLYGON")
 
 world = world_poly %>% 
-  st_transform(crs = 3857)
+  st_transform(crs = 3857) %>% 
+  st_make_valid()
+
+bbox_3857 = st_as_sfc(st_bbox(
+  c(
+    xmin = -20026376.39 ,
+    xmax = 20026376.39,
+    ymax = 20048966.10,
+    ymin = -19600000
+  ),
+  crs = st_crs(3857)
+))
+
+world = st_intersection(world, bbox_3857)
 
 world_areas = world %>% 
   st_transform(crs = "+proj=moll") %>% 
