@@ -6,5 +6,5 @@
 
 ![](worlds_animate2.gif)
 
-Learn more by reading [the "How much our maps are distorted?" blog post](https://nowosad.github.io/post/maps-distortion/).
+Learn more by reading [the "How much our maps are distorted?" blog post](https://jakubnowosad.com/posts/2018-10-23-map-distortion/).
 
